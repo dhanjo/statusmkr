@@ -1,6 +1,5 @@
 # Statusmrk
 
-
 This tool can help a security researcher in finding the HTTP status code of the target domain.
 
 `Usage :- python statusmrk.py <subdomain file> <output file>`
@@ -10,6 +9,4 @@ This tool can help a security researcher in finding the HTTP status code of the 
 `sudo chmod +x installer.sh`
 
 `./installer.sh`
-
-`sudo chmod +x statusmkr.py'
 
