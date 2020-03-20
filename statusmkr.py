@@ -19,6 +19,7 @@ try :
 
     web_list = sys.argv[1]
     status_name = sys.argv[2]
+    print("[+]Scanning started.....")
     web_scan_list = 'cat ' + web_list + ' | httprobe > ' + status_name
     htrob = os.system(web_scan_list)
     WebsiteStatus = namedtuple('WebsiteStatus', ['status_code', 'reason'])
