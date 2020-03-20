@@ -3,4 +3,5 @@ This tool can help a security researcher in finding the HTTP status code the tar
 # Installing 
 
 `sudo chmod +x installer.sh`
-`/installer.sh`
+
+`./installer.sh`
