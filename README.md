@@ -1,4 +1,4 @@
-# Statusmrk
+# Statusmkr
 
 This tool can help a security researcher in finding the HTTP status code of a large subdomain file which can help in reducing the
 time.
