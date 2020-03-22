@@ -1,7 +1,7 @@
 # Statusmkr
 
 This tool can help a security researcher in finding the HTTP status code of a large subdomain file which can help in reducing the
-time.
+time during reconnaissance.
 
 `Usage :- sudo python statusmkr.py <subdomain file> <output file>`
 
