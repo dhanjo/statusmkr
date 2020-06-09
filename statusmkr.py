@@ -7,12 +7,14 @@ from collections import namedtuple
 
 try :
     print("""
- ____  _        _                       _         
-/ ___|| |_ __ _| |_ _   _ ___ _ __ ___ | | ___ __ 
+ ____  _        _                       _
+/ ___|| |_ __ _| |_ _   _ ___ _ __ ___ | | ___ __
 \___ \| __/ _` | __| | | / __| '_ ` _ \| |/ / '__|
- ___) | || (_| | |_| |_| \__ \ | | | | |   <| |   
-|____/ \__\__,_|\__|\__,_|___/_| |_| |_|_|\_\_|   
-                                                  
+ ___) | || (_| | |_| |_| \__ \ | | | | |   <| |
+|____/ \__\__,_|\__|\__,_|___/_| |_| |_|_|\_\_|
+
+
+
 
     ## Coded by Dhananjay Garg | Insta - @dhananjaygarg_
     """)
@@ -46,6 +48,12 @@ try :
             website_status = get_status(site)
             print("{0:30} {1:10} {2:10}"
                 .format(site, website_status.status_code, website_status.reason))
+            with open(status_name+'_output.txt', 'a') as m:
+    	         m.write("{0:30} {1:10} {2:10}".format(site, website_status.status_code, website_status.reason))
+                 m.write("\n")
+    	         m.close()
+
+
 except (IndexError):
     print("""
     Usage :- python statusmrk.py <subdomain file> <output file>
