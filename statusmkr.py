@@ -4,17 +4,13 @@ import os
 import sys
 from collections import namedtuple
 
-
-try :
+try:
     print("""
  ____  _        _                       _
 / ___|| |_ __ _| |_ _   _ ___ _ __ ___ | | ___ __
 \___ \| __/ _` | __| | | / __| '_ ` _ \| |/ / '__|
  ___) | || (_| | |_| |_| \__ \ | | | | |   <| |
 |____/ \__\__,_|\__|\__,_|___/_| |_| |_|_|\_\_|
-
-
-
 
     ## Coded by Dhananjay Garg | Insta - @dhananjaygarg_
     """)
@@ -27,13 +23,12 @@ try :
     WebsiteStatus = namedtuple('WebsiteStatus', ['status_code', 'reason'])
     names = ['foo', 'bar']
 
-
     def get_status(site):
         try:
             response = requests.head(site, timeout=5)
             status_code = response.status_code
             reason = response.reason
-        except (requests.exceptions.ConnectionError,requests.exceptions.ReadTimeout):
+        except (requests.exceptions.ConnectionError, requests.exceptions.ReadTimeout):
             status_code = '000'
             reason = 'ConnectionError'
         website_status = WebsiteStatus(status_code, reason)
@@ -47,14 +42,13 @@ try :
             site = str(si).format(name)
             website_status = get_status(site)
             print("{0:30} {1:10} {2:10}"
-                .format(site, website_status.status_code, website_status.reason))
+                  .format(site, website_status.status_code, website_status.reason))
             with open(status_name+'_output.txt', 'a') as m:
-    	         m.write("{0:30} {1:10} {2:10}".format(site, website_status.status_code, website_status.reason))
-                 m.write("\n")
-    	         m.close()
-
+                m.write("{0:30} {1:10} {2:10}".format(site, website_status.status_code, website_status.reason))
+                m.write("\n")
+                m.close()
 
 except (IndexError):
     print("""
     Usage :- python statusmrk.py <subdomain file> <output file>
-        """)
+    """)
