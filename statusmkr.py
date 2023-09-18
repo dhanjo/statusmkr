@@ -12,7 +12,7 @@ try:
  ___) | || (_| | |_| |_| \__ \ | | | | |   <| |
 |____/ \__\__,_|\__|\__,_|___/_| |_| |_|_|\_\_|
 
-    ## Coded by Dhananjay Garg | Insta - @dhananjaygarg_
+    ## Coded by Dhananjay Garg
     """)
 
     web_list = sys.argv[1]
